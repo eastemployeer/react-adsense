@@ -63,7 +63,9 @@ function App() {
             <div className="mt-2 text-sm leading-5 text-gray-600">
               <p>Adblock must be disabled</p>
               <div className="text-center adsbygoogle mt-2">
-                <Adsense client="ca-pub-7189240353284952" slot="7698610474" />
+                {navigator.userAgent !== 'ReactSnap' && (
+                  <Adsense client="ca-pub-7189240353284952" slot="7698610474" />
+                )}
               </div>
             </div>
           </div>
