@@ -17,12 +17,16 @@
     "google",
     "typescript"
   ],
+  "reactSnap": {
+    "inlineCss": true,
+    "source": "build"
+  },
   "scripts": {
     "lint": "eslint --ext .js,.ts,.tsx .",
     "lint:fix": "eslint --fix --ext .js,.ts,.tsx .",
     "prepare": "npm run build",
     "build": "tsc -p tsconfig.build.json && tsc -p tsconfig.module.json",
-    "demo:build": "npm run build --workspace=demo",
+    "demo:build": "npm run build --workspace=demo && react-snap",
     "demo:watch": "npm run dev --workspace=demo",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -43,6 +47,7 @@
     "eslint-plugin-react-hooks": "4.5.0",
     "happy-dom": "5.2.0",
     "react": "18.1.0",
+    "react-snap": "^1.23.0",
     "typescript": "4.7.3",
     "vitest": "0.14.2"
   },
